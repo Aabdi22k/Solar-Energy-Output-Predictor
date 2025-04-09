@@ -1,0 +1,134 @@
+# ☀️ Solar Energy Output Predictor
+
+**Solar Energy Output Predictor** is a machine learning-powered web application that predicts daily solar panel energy output based on real-world solar radiation and weather data. It helps users estimate how much energy their solar panels will generate over the next 5 days.
+
+Built for renewable energy enthusiasts, data scientists, and solar engineers who want quick, accurate insights into solar energy production.
+
+---
+
+## 🔥 Demo
+
+[![Streamlit App](https://img.shields.io/badge/Streamlit-Live--Demo-orange?logo=streamlit)](https://your-streamlit-app-link.com)  
+*Replace with your live app link when ready.*
+
+---
+
+## 🚀 Features
+
+- **📈 5-Day Solar Output Forecast**  
+  Predicts solar panel output using real-world weather and solar radiation data.
+
+- **🛠️ Custom Panel Configuration**  
+  Input your **solar array size** (kW) and **panel efficiency** (%) for personalized predictions.
+
+- **🌎 Location Input (Work in Progress)**  
+  Currently available: **Phoenix, Arizona**.  
+  (Working on adding more locations globally!)
+
+- **🎯 Error Analysis**  
+  Shows predictions within **Mean Absolute Error (MAE)** and **Standard Deviation (STD)** bands.
+
+- **⚡ Cached Models**  
+  Saves and reloads trained models for faster predictions.
+
+- **📊 Interactive Graphs**  
+  Displays model accuracy and prediction confidence visually.
+
+- **🌐 Web App**  
+  Built with **Streamlit** for a fast and beautiful user experience.
+
+---
+
+## 🛠️ Tech Stack
+
+| Tool/Library | Purpose |
+|--------------|---------|
+| **Python** | Core programming language |
+| **Streamlit** | Web application frontend |
+| **Scikit-learn** | Machine learning (Random Forest Regressor) |
+| **TensorFlow** | (Optional) Future deep learning models |
+| **Matplotlib & Seaborn** | Visualization and plotting |
+| **Joblib** | Model serialization (saving and loading) |
+| **Open-Meteo API** | Historical and forecast weather data |
+| **NREL NSRDB API** | Historical solar radiation (GHI) data |
+
+---
+
+## 📥 Data Sources
+
+- **Solar Radiation (GHI)**: [NREL NSRDB](https://nsrdb.nrel.gov/)
+- **Historical Weather**: [Open-Meteo Historical API](https://open-meteo.com/)
+- **Forecast Weather**: [Open-Meteo Forecast API](https://open-meteo.com/)
+
+> ⚡ No Meteostat or OpenWeatherMap (OWM) used.
+
+---
+
+## 📊 Example Outputs
+
+| Day | Predicted GHI (W/m²) | Energy Output (kWh) | MAE Range | ±1 STD Range |
+|----|----------------------|--------------------|-----------|--------------|
+| Day 1 | 5.3 | 7.8 | 7.2 - 8.4 | 6.8 - 9.0 |
+| Day 2 | 5.5 | 8.1 | 7.5 - 8.7 | 7.0 - 9.2 |
+
+Interactive graphs show:
+
+- Accuracies within MAE, 1 STD, 2 STD, 3 STD bands
+- GHI prediction confidence ranges
+
+---
+
+## 📋 How It Works
+
+1. **Data Collection**  
+   - Fetch GHI and weather data from APIs for a given latitude and longitude.
+
+2. **Model Training**  
+   - Train a **Random Forest Regressor** on historical GHI + weather features.
+   - Cache/save the model for future use.
+
+3. **Prediction**  
+   - Use forecasted weather to predict GHI for the next 5 days.
+
+4. **Solar Output Calculation**  
+   - Convert GHI predictions into **solar energy output** based on user panel settings.
+
+5. **Error Analysis**  
+   - Show output bands based on model MAE and standard deviation.
+
+---
+
+## 🧠 Future Improvements
+
+- 🌍 **Global Location Support**  
+  Allow users to input any latitude/longitude.
+
+- 🧮 **Advanced Panel Settings**  
+  Add panel tilt, azimuth angle, and degradation factors.
+
+- 🛰️ **Real-Time API Updates**  
+  Continuously refresh forecasts for live predictions.
+
+- 📈 **More Machine Learning Models**  
+  Explore XGBoost, LightGBM, and Deep Neural Networks for even better accuracy.
+
+- 📡 **API Service**  
+  Provide predictions via an API endpoint.
+
+---
+
+## 🧑‍💻 Developer Info
+
+Developed with ☀️ and 🚀 by [Your Name].
+
+If you like this project, consider giving it a ⭐ and following me for more!
+
+---
+
+## 🛠️ Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/your-username/solar-energy-output-predictor.git
+cd solar-energy-output-predictor

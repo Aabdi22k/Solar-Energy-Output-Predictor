@@ -4,14 +4,10 @@
 
 Built for renewable energy enthusiasts, data scientists, and solar engineers who want quick, accurate insights into solar energy production.
 
----
-
 ## 🔥 Demo
 
 [![Streamlit App](https://img.shields.io/badge/Streamlit-Live--Demo-orange?logo=streamlit)](https://your-streamlit-app-link.com)  
 *Replace with your live app link when ready.*
-
----
 
 ## 🚀 Features
 
@@ -34,8 +30,6 @@ Built for renewable energy enthusiasts, data scientists, and solar engineers who
 - **🌐 Web App**  
   Built with **Streamlit** for a fast and beautiful user experience.
 
----
-
 ## 🛠️ Tech Stack
 
 | Tool/Library | Purpose |
@@ -48,15 +42,11 @@ Built for renewable energy enthusiasts, data scientists, and solar engineers who
 | **Open-Meteo API** | Historical and forecast weather data |
 | **NREL NSRDB API** | Historical solar radiation (GHI) data |
 
----
-
 ## 📥 Data Sources
 
 - **Solar Radiation (GHI)**: [NREL NSRDB](https://nsrdb.nrel.gov/)
 - **Historical Weather**: [Open-Meteo Historical API](https://open-meteo.com/)
 - **Forecast Weather**: [Open-Meteo Forecast API](https://open-meteo.com/)
-
----
 
 ## 📋 How It Works
 
@@ -76,8 +66,6 @@ Built for renewable energy enthusiasts, data scientists, and solar engineers who
 5. **Error Analysis**  
    - Show output bands based on model MAE and standard deviation.
 
----
-
 ## 🧠 Future Improvements
 
 - 🌍 **Global Location Support**  
@@ -94,8 +82,6 @@ Built for renewable energy enthusiasts, data scientists, and solar engineers who
 
 - 📡 **API Service**  
   Provide predictions via an API endpoint.
-
----
 
 ## 🧑‍💻 Developer Info
 

@@ -31,9 +31,6 @@ Built for renewable energy enthusiasts, data scientists, and solar engineers who
 - **⚡ Cached Models**  
   Saves and reloads trained models for faster predictions.
 
-- **📊 Interactive Graphs**  
-  Displays model accuracy and prediction confidence visually.
-
 - **🌐 Web App**  
   Built with **Streamlit** for a fast and beautiful user experience.
 
@@ -46,7 +43,6 @@ Built for renewable energy enthusiasts, data scientists, and solar engineers who
 | **Python** | Core programming language |
 | **Streamlit** | Web application frontend |
 | **Scikit-learn** | Machine learning (Random Forest Regressor) |
-| **TensorFlow** | (Optional) Future deep learning models |
 | **Matplotlib & Seaborn** | Visualization and plotting |
 | **Joblib** | Model serialization (saving and loading) |
 | **Open-Meteo API** | Historical and forecast weather data |
@@ -59,22 +55,6 @@ Built for renewable energy enthusiasts, data scientists, and solar engineers who
 - **Solar Radiation (GHI)**: [NREL NSRDB](https://nsrdb.nrel.gov/)
 - **Historical Weather**: [Open-Meteo Historical API](https://open-meteo.com/)
 - **Forecast Weather**: [Open-Meteo Forecast API](https://open-meteo.com/)
-
-> ⚡ No Meteostat or OpenWeatherMap (OWM) used.
-
----
-
-## 📊 Example Outputs
-
-| Day | Predicted GHI (W/m²) | Energy Output (kWh) | MAE Range | ±1 STD Range |
-|----|----------------------|--------------------|-----------|--------------|
-| Day 1 | 5.3 | 7.8 | 7.2 - 8.4 | 6.8 - 9.0 |
-| Day 2 | 5.5 | 8.1 | 7.5 - 8.7 | 7.0 - 9.2 |
-
-Interactive graphs show:
-
-- Accuracies within MAE, 1 STD, 2 STD, 3 STD bands
-- GHI prediction confidence ranges
 
 ---
 
@@ -119,16 +99,6 @@ Interactive graphs show:
 
 ## 🧑‍💻 Developer Info
 
-Developed with ☀️ and 🚀 by [Your Name].
+Developed by Farah Abdi.
 
 If you like this project, consider giving it a ⭐ and following me for more!
-
----
-
-## 🛠️ Installation
-
-Clone the repository:
-
-```bash
-git clone https://github.com/your-username/solar-energy-output-predictor.git
-cd solar-energy-output-predictor

@@ -1,1 +1,30 @@
+# Ignore environment files
 .env
+
+# Ignore Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ignore model files
+*.pkl
+saved_models/
+saved_forecasts/
+
+# Ignore Jupyter notebooks (if any)
+*.ipynb
+
+# Ignore data files
+*.csv
+*.json
+*.xlsx
+
+# Ignore logs
+*.log
+
+# Ignore VSCode settings (optional)
+.vscode/
+
+# Ignore OS files
+.DS_Store
+Thumbs.db

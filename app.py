@@ -127,10 +127,10 @@ with left_col:
         # Make the accuracies show up nicely in one row
         col1, col2, col3, col4 = st.columns(4)
 
-        col1.metric("±MAE Accuracy", f"{accuracies['±MAE']:.2f}%")
-        col2.metric("±1 STD Accuracy", f"{accuracies['±1std']:.2f}%")
-        col3.metric("±2 STD Accuracy", f"{accuracies['±2std']:.2f}%")
-        col4.metric("±3 STD Accuracy", f"{accuracies['±3std']:.2f}%")
+        col1.metric("\u00B1MAE Accuracy", f"{accuracies['\u00B1MAE']:.2f}%")
+        col2.metric("\u00B11 STD Accuracy", f"{accuracies['\u00B11std']:.2f}%")
+        col3.metric("\u00B12 STD Accuracy", f"{accuracies['\u00B12std']:.2f}%")
+        col4.metric("\u00B13 STD Accuracy", f"{accuracies['\u00B13std']:.2f}%")
         st.markdown("---")
         # --- Forecast Outputs ---
 
@@ -175,10 +175,10 @@ with right_col:
     3. **Prediction**:
         - Using the trained model, the application predicts the **Global Horizontal Irradiance (GHI)** for the next 5 days based on the forecasted weather data.
         - The output is then scaled to provide estimated **solar power output**, accounting for panel efficiency and size of the solar array.
-        - The predicted output is provided within **confidence intervals**: ±MAE, ±1 STD, ±2 STD, and ±3 STD to give users an understanding of the possible range of solar energy production.
+        - The predicted output is provided within **confidence intervals**: \u00B1MAE, \u00B11 STD, \u00B12 STD, and \u00B13 STD to give users an understanding of the possible range of solar energy production.
 
     ## Key Features:
-    - **Solar Output Predictions**: Displays solar energy output predictions for the next 5 days with uncertainty bands (±MAE, ±1 STD, ±2 STD, ±3 STD).
+    - **Solar Output Predictions**: Displays solar energy output predictions for the next 5 days with uncertainty bands (\u00B1MAE, \u00B11 STD, \u00B12 STD, \u00B13 STD).
     - **Machine Learning Model**: Uses a trained Random Forest model for predicting solar power output.
     - **Forecast Data**: Real-time weather forecast data and GHI predictions.
     - **Accurate Results**: Provides accuracies for the model’s performance (within MAE and STD bands).

@@ -6,7 +6,7 @@ Built for renewable energy enthusiasts, data scientists, and solar engineers who
 
 ## 🔥 Demo
 
-[![Streamlit App](https://img.shields.io/badge/Streamlit-Live--Demo-orange?logo=streamlit)](http://3.23.124.179:8501/)  
+[![Streamlit App](https://img.shields.io/badge/Streamlit-Live--Demo-orange?logo=streamlit)](http://3.23.124.179:8501/){:target="_blank"}
 
 ## 🚀 Features
 

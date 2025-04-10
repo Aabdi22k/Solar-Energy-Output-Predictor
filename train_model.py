@@ -209,10 +209,10 @@ def train_and_evaluate_model(df):
     plt.plot(x, y, label="Normal Distribution", color='black')
 
     # Fill areas for MAE and standard deviations
-    plt.fill_between(x, y, where=(x >= mean - mae) & (x <= mean + mae), color='green', alpha=0.3, label=f'\u00B1MAE ({accuracy_std_devs['MAE']:.2f}%)')
-    plt.fill_between(x, y, where=(x >= mean - std) & (x <= mean + std), color='red', alpha=0.2, label=f'\u00B11 Std Dev ({accuracy_std_devs['1std']:.2f}%)')
-    plt.fill_between(x, y, where=(x >= mean - 2*std) & (x <= mean + 2*std), color='orange', alpha=0.2, label=f'\u00B12 Std Dev ({accuracy_std_devs['2std']:.2f}%)')
-    plt.fill_between(x, y, where=(x >= mean - 3*std) & (x <= mean + 3*std), color='purple', alpha=0.2, label=f'\u00B13 Std Dev ({accuracy_std_devs['3std']:.2f}%)')
+    plt.fill_between(x, y, where=(x >= mean - mae) & (x <= mean + mae), color='green', alpha=0.3, label=f'\u00B1MAE ({accuracy_std_devs["MAE"]:.2f}%)')
+    plt.fill_between(x, y, where=(x >= mean - std) & (x <= mean + std), color='red', alpha=0.2, label=f'\u00B11 Std Dev ({accuracy_std_devs["1std"]:.2f}%)')
+    plt.fill_between(x, y, where=(x >= mean - 2*std) & (x <= mean + 2*std), color='orange', alpha=0.2, label=f'\u00B12 Std Dev ({accuracy_std_devs["2std"]:.2f}%)')
+    plt.fill_between(x, y, where=(x >= mean - 3*std) & (x <= mean + 3*std), color='purple', alpha=0.2, label=f'\u00B13 Std Dev ({accuracy_std_devs["3std"]:.2f}%)')
 
     # Add vertical lines
     plt.axvline(mean - mae, color='green', linestyle='dashed', linewidth=1)

@@ -127,10 +127,10 @@ with left_col:
         # Make the accuracies show up nicely in one row
         col1, col2, col3, col4 = st.columns(4)
 
-        col1.metric("\u00B1MAE Accuracy", f"{accuracies['\u00B1MAE']:.2f}%")
-        col2.metric("\u00B11 STD Accuracy", f"{accuracies['\u00B11std']:.2f}%")
-        col3.metric("\u00B12 STD Accuracy", f"{accuracies['\u00B12std']:.2f}%")
-        col4.metric("\u00B13 STD Accuracy", f"{accuracies['\u00B13std']:.2f}%")
+        col1.metric("\u00B1MAE Accuracy", f"{accuracies['±MAE']:.2f}%")
+        col2.metric("\u00B11 STD Accuracy", f"{accuracies['±1std']:.2f}%")
+        col3.metric("\u00B12 STD Accuracy", f"{accuracies['±2std']:.2f}%")
+        col4.metric("\u00B13 STD Accuracy", f"{accuracies['±3std']:.2f}%")
         st.markdown("---")
         # --- Forecast Outputs ---
 

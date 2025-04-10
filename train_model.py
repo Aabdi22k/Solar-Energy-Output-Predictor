@@ -151,7 +151,7 @@ def train_and_evaluate_model(df):
     
     # Calculate and display the custom binary accuracy metric based on MAE tolerance
     accuracy, correct, incorrect = calculate_accuracy_within_mae(y_test, y_pred, mae)
-    print(f"\nCustom Accuracy (within ±MAE): {accuracy:.2f}% (Correct: {correct}, Incorrect: {incorrect})")
+    print(f"\nCustom Accuracy (within \u00B1MAE): {accuracy:.2f}% (Correct: {correct}, Incorrect: {incorrect})")
     
     # Calculate and display the continuous accuracy metric
     cont_accuracy, cont_mae, cont_std = calculate_continuous_accuracy(y_test, y_pred)
@@ -159,10 +159,10 @@ def train_and_evaluate_model(df):
     
     # Calculate and display accuracy within different standard deviation ranges
     accuracy_std_devs = calculate_accuracy_within_std_devs(y_test, y_pred, cont_mae, cont_std)
-    print(f"\nAccuracy within ±MAE: {accuracy_std_devs['MAE']:.2f}%")
-    print(f"Accuracy within ±1std: {accuracy_std_devs['1std']:.2f}%")
-    print(f"Accuracy within ±2std: {accuracy_std_devs['2std']:.2f}%")
-    print(f"Accuracy within ±3std: {accuracy_std_devs['3std']:.2f}%")
+    print(f"\nAccuracy within \u00B1MAE: {accuracy_std_devs['MAE']:.2f}%")
+    print(f"Accuracy within \u00B11std: {accuracy_std_devs['1std']:.2f}%")
+    print(f"Accuracy within \u00B12std: {accuracy_std_devs['2std']:.2f}%")
+    print(f"Accuracy within \u00B13std: {accuracy_std_devs['3std']:.2f}%")
     
     # Calculate and display feature importances
     feature_importances = model.feature_importances_
@@ -209,10 +209,10 @@ def train_and_evaluate_model(df):
     plt.plot(x, y, label="Normal Distribution", color='black')
 
     # Fill areas for MAE and standard deviations
-    plt.fill_between(x, y, where=(x >= mean - mae) & (x <= mean + mae), color='green', alpha=0.3, label=f'±MAE ({accuracy_std_devs['MAE']:.2f}%)')
-    plt.fill_between(x, y, where=(x >= mean - std) & (x <= mean + std), color='red', alpha=0.2, label=f'±1 Std Dev ({accuracy_std_devs['1std']:.2f}%)')
-    plt.fill_between(x, y, where=(x >= mean - 2*std) & (x <= mean + 2*std), color='orange', alpha=0.2, label=f'±2 Std Dev ({accuracy_std_devs['2std']:.2f}%)')
-    plt.fill_between(x, y, where=(x >= mean - 3*std) & (x <= mean + 3*std), color='purple', alpha=0.2, label=f'±3 Std Dev ({accuracy_std_devs['3std']:.2f}%)')
+    plt.fill_between(x, y, where=(x >= mean - mae) & (x <= mean + mae), color='green', alpha=0.3, label=f'\u00B1MAE ({accuracy_std_devs['MAE']:.2f}%)')
+    plt.fill_between(x, y, where=(x >= mean - std) & (x <= mean + std), color='red', alpha=0.2, label=f'\u00B11 Std Dev ({accuracy_std_devs['1std']:.2f}%)')
+    plt.fill_between(x, y, where=(x >= mean - 2*std) & (x <= mean + 2*std), color='orange', alpha=0.2, label=f'\u00B12 Std Dev ({accuracy_std_devs['2std']:.2f}%)')
+    plt.fill_between(x, y, where=(x >= mean - 3*std) & (x <= mean + 3*std), color='purple', alpha=0.2, label=f'\u00B13 Std Dev ({accuracy_std_devs['3std']:.2f}%)')
 
     # Add vertical lines
     plt.axvline(mean - mae, color='green', linestyle='dashed', linewidth=1)
@@ -227,7 +227,7 @@ def train_and_evaluate_model(df):
     # Labels and legend
     plt.xlabel("Value")
     plt.ylabel("Density")
-    plt.title("Distribution with ±MAE and Standard Deviations")
+    plt.title("Distribution with \u00B1MAE and Standard Deviations")
     plt.legend()
     plt.show()
 

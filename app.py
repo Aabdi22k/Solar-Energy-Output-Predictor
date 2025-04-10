@@ -16,9 +16,12 @@ import seaborn as sns
 import numpy as np
 import matplotlib as plt
 
-# Directory to save models
-MODEL_DIR = "saved_models"
-FORECAST_DIR = "saved_forecasts"
+# Get the absolute path to where the script is running or where you want to save models
+base_dir = os.path.dirname(os.path.abspath(__file__))  # This gives the folder where your script is located
+
+# Full path to your directories
+MODEL_DIR = os.path.join(base_dir, "saved_models")
+FORECAST_DIR = os.path.join(base_dir, "saved_forecasts")
 os.makedirs(MODEL_DIR, exist_ok=True)
 os.makedirs(FORECAST_DIR, exist_ok=True)
 

@@ -14,7 +14,7 @@ Built for renewable energy enthusiasts, data scientists, and solar engineers who
   Predicts solar panel output using real-world weather and solar radiation data.
 
 - **🛠️ Custom Panel Configuration**  
-  Input your **solar array size** (kW) and **panel efficiency** (%) for personalized predictions.
+  Input your **solar array size** (m^2) and **panel efficiency** (%) for personalized predictions.
 
 - **🌎 Location Input (Work in Progress)**  
   Currently available: **Phoenix, Arizona**.  
@@ -44,8 +44,7 @@ Built for renewable energy enthusiasts, data scientists, and solar engineers who
 ## 📥 Data Sources
 
 - **Solar Radiation (GHI)**: [NREL NSRDB](https://nsrdb.nrel.gov/)
-- **Historical Weather**: [Open-Meteo Historical API](https://open-meteo.com/)
-- **Forecast Weather**: [Open-Meteo Forecast API](https://open-meteo.com/)
+- **Historical & Forecast Weather**: [Open-Meteo Historical API](https://open-meteo.com/)
 
 ## 📋 How It Works
 
